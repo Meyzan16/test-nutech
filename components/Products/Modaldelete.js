@@ -13,7 +13,7 @@ export default function Modaldelete({activeID, setShowModal}){
         axios.get('/api/products?id='+id).then(response => {
             setProductInfo(response.data)
         });
-    },[])
+    },[id])
 
     async function deleteProduct() {
         await axios.delete('/api/products?id='+id);

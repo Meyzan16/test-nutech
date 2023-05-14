@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import UploadImage from "./UploadImage";
 
 export default function ProductForm({
     _id,

@@ -2,14 +2,17 @@ import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import UploadImage from "./UploadImage";
 
 export default function ProductForm({
     _id,
+    // photo:existingphoto,
     nama_barang:existingnama_barang, 
     harga_beli:existingharga_beli, 
     harga_jual:existingharga_jual,
     stok:existingstok,
 }){
+    // const [photo,setphoto] = useState(existingphoto || []);
     const [nama_barang, setnama_barang] = useState(existingnama_barang || '');
     const [harga_beli, setharga_beli] = useState(existingharga_beli || '');
     const [harga_jual, setharga_jual] = useState(existingharga_jual || '');
@@ -31,11 +34,11 @@ export default function ProductForm({
         setGoToProduct(true);
     }
 
+
+
     if(goToProduct){
         router.push('/products');
     }
-
-    
 
     return (
             <div className="w-full lg:w-1/2">
@@ -47,7 +50,7 @@ export default function ProductForm({
                             onChange={ev => setnama_barang(ev.target.value) } />
                         </div>
 
-
+                        
 
                         <div>
                             <label className="text-base">Harga beli</label>

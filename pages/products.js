@@ -23,22 +23,6 @@ export default function Products() {
     
     }
 
-    // const [search, setSearch] = useState('');
-
-    // const handleSearch = (event) => {
-    //     setSearch(event.target.value);
-    // };
-
-    // const data = {
-    //     nodes: axios.get('/api/products').filter((item) =>
-    //     item.name.includes(search)
-    //     )
-    // };
-
-    // console.log(data);
-
-    
-
     return (
         <Layout>
             <h1 className="text-teal-500 text-xl mb-10">
@@ -48,7 +32,7 @@ export default function Products() {
             <Link className="bg-teal-500 py-2 px-4 text-base text-white rounded-xl " 
             href={'/products/new'}>Add new product</Link>
 
-	<div className="py-4 w-full lg:w-1/2">
+	        <div className="py-4 w-full lg:w-1/2">
 			{/* <label for="table-search" className="sr-only">Search</label>
                 <div className="relative mt-1">
                     
